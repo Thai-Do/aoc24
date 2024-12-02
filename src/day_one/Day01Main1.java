@@ -1,17 +1,17 @@
-package application;
+package day_one;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Day01Main1 {
     public static void main(String[] args) throws IOException {
         List<Integer> leftList = new ArrayList<>();
         List<Integer> rightList = new ArrayList<>();
         Integer result = 0;
 
         // read input
-        try (BufferedReader br = new BufferedReader(new FileReader("day-01/src/application/input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/day_one/input.txt"))) {
             br.lines().forEach(line -> {
                 String[] values = line.split(" {3}");
                 leftList.add(Integer.parseInt(values[0]));

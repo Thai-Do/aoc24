@@ -1,4 +1,4 @@
-package application;
+package day_one;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,14 +7,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.TreeMap;
 
-public class Main2 {
+public class Day02Main2 {
     public static void main(String[] args) throws IOException {
         TreeMap<Integer, Integer> leftNumberToCountMap = new TreeMap<>();
         TreeMap<Integer, Integer> rightNumberToCountMap = new TreeMap<>();
         Integer result = 0;
 
         // read input
-        try (BufferedReader br = new BufferedReader(new FileReader("day-01/src/application/input.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/day_one/input.txt"))) {
             br.lines().forEach(line -> {
                 String[] values = line.split(" {3}");
                 leftNumberToCountMap.merge(Integer.parseInt(values[0]), 1, Integer::sum);
